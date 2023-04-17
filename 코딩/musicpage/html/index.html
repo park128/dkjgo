@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grugkong 음악사이트</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/musicPlayer.css">
+    <script src="../js/music.js" defer></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.3.2/roundslider.min.js"></script> -->
+    <script src="../js/musicPlayer.js" defer></script>
+    <script src="../js/middleAlbum.js" defer></script>
+    <!-- 무료 아이콘 -->
+    <script src="https://kit.fontawesome.com/968366f968.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- 상단 베너 -->
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fa-solid fa-headphones"></i>
+            <a href="">Grugkong</a>
+        </div>
+
+        <ul class="navbar_menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Weddings</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Bookings</a></li>
+        </ul>
+
+        <ul class="navbar_icons">
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+        </ul>
+
+        <a class="navbar_toogleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+    <!-- 상단 디브  -->
+    <div class="top_box">
+        <div class="top_box_album">
+            <div class="wrapper">
+                <div class="details">
+                    <div class="track-name">Track Name</div>
+                    <div class="track-artist">Track Artist</div>
+                    <div class="track-art"></div>
+                    <div class="slider_container1">
+                        <i class="fa fa-volume-up"></i>
+                        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                    </div>
+                    <div class="now-playing">PLAYING x OF y</div>
+                    <div class="slider_container2">
+                        <div class="current-time">00:00</div>
+                        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                        <div class="total-duration">00:00</div>
+                    </div>
+                    <div class="buttons">
+                        <div class="repeat-track" onclick="repeatTrack()">
+                            <i class="fa fa-repeat fa-1x" title="repeat"></i>
+                        </div>
+                        <div class="prev-track" onclick="prevTrack()">
+                            <i class="fa fa-step-backward fa-2x"></i>
+                        </div>
+                        <div class="playpause-track" onclick="playpauseTrack()">
+                            <i class="fa fa-play-circle fa-2x"></i>
+                        </div>
+                        <div class="next-track" onclick="nextTrack()">
+                            <i class="fa fa-step-forward fa-2x"></i>
+                        </div>
+                        <div class="random-track" onclick="randomTrack()">
+                            <i class="fas fa-random fa-1x" title="random"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top_box_logo">
+            <!-- <div class="top_box_Explanation" id="wave">
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+            </div> -->
+        </div>
+    </div>
+    <div class="middle_box">
+        <div class="middle_layout">
+            <div class="middle_title_layout">
+                <!-- 구글 폰드 적용시키기 -->
+                <div class="middle_title">
+                    <span>MAKE<br>ALBUM</span><br>
+                    <span>소중한 추억을 만들어드립니다.</span>
+                </div>
+                <div class="middle_title_btn">
+                    <spen class="next">ALBUM MORE<i class="fa-sharp fa-solid fa-arrow-right"></i></spen>
+                </div>
+            </div>
+            <!-- 디브 구상해보기 -->
+            <div class="middle_album">
+                <div class="slides_wrapper">
+                    <ul class="slides">
+                        <li style="width: 250px;height: 350px;background-size: 100%;
+                        background-image: url(../img/albumcover1.jpeg);"></li>
+                        <li style="width: 250px;height: 350px;background-size: 100%;
+                        background-image: url(../img/albumcover2.jpeg);"></li>
+                        <li style="width: 250px;height: 350px;background-size: 100%;
+                        background-image: url(../img/albumcover3.jpeg);"></li>
+                        <li style="width: 250px;height: 350px;background-size: 100%;
+                        background-image: url(../img/albumcover4.jpeg);"></li>
+                        <li style="width: 250px;height: 350px;background-size: 100%;
+                        background-image: url(../img/albumcover5.jpeg);"></li>
+                    </ul>
+                </div>
+                <span class="album_cover">ALBUM COVER</span>
+                <div class="mai"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom_box">
+        <div class="bottom_title_layout">
+            <div class="bottom_title">
+                <span style="color: black;">Grugkong SNS</span>
+            </div>
+        </div>
+        <div class="bottom_album_layout">
+            <div class="bottom_album">
+                <div class="bottom_album1">
+                    <div class="card">
+                        <div class="card_side"><img src="../img/A-1.jpg"></div>
+                        <div class="card_side back"><img src="../img/A-2.jpg"></div>
+                    </div>
+                </div>
+                <div class="bottom_album1">
+                    <div class="card">
+                        <div class="card_side"><img src="../img/B-1.jpeg"></div>
+                        <div class="card_side back"><img src="../img/B-2.jpeg"></div>
+                    </div>
+                </div>
+                <div class="bottom_album1">
+                    <div class="card">
+                        <div class="card_side"><img src="../img/C-1.jpg"></div>
+                        <div class="card_side back"><img src="../img/C-2.jpg"></div>
+                    </div>
+                </div>
+                <div class="bottom_album1">
+                    <div class="card">
+                        <div class="card_side"><img src="../img/D-1.jpeg"></div>
+                        <div class="card_side back"><img src="../img/D-2.jpeg"></div>
+                    </div>
+                </div>
+            </div>
+            <span>@사진을 바탕해서 앨범 제작</span>
+            <div class="bottom_album">
+                <div class="bottom_album1">
+                    <div class="card">
+                        <div class="card_side"><img src="../img/sns1_1.jpeg"></div>
+                        <div class="card_side back"><img src="../img/sns1_2.jpeg"></div>
+                    </div>
+                </div>
+                <div class="bottom_album1">
+                    <div class="card">
+                        <div class="card_side"><img src="../img/sns2_1.jpeg"></div>
+                        <div class="card_side back"><img src="../img/sns2_2.jpeg"></div>
+                    </div>
+                </div>
+                <div class="bottom_album1">
+                    <div class="card">
+                        <div class="card_side"><img src="../img/sns3_1.jpeg"></div>
+                        <div class="card_side back"><img src="../img/sns3_2.jpeg"></div>
+                    </div>
+                </div>
+                <div class="bottom_album1">
+                    <div class="card">
+                        <div class="card_side"><img src="../img/sns4_1.jpeg"></div>
+                        <div class="card_side back"><img src="../img/sns4_2.jpeg"></div>
+                    </div>
+                </div>
+            </div>
+            <span>@그림을 바탕해서 앨범 제작</span>
+        </div>
+    </div>
+    </div>
+    <div class="footer_box">
+        <div class="footer_logo"></div>
+        <div class="footer_title">
+            <div>
+                <span>Grugkong 음악 사이트</span>
+            </div>
+            <div>
+                <spam>음원제작 및 앨범제작을 하는 사이트로 만들어봤습니다.<br>
+                        H.P 010-7725-0665 박근태.
+                </spam>
+
+            </div>
+        </div>
+        <div class="footer_icon">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+            <i class="fa-brands fa-github fa-2x"></i>
+            <i class="fa-brands fa-youtube fa-2x"></i>
+            <i class="fa-brands fa-instagram fa-2x"></i>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- 깃을해 -->
