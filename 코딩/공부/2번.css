@@ -1,0 +1,27 @@
+.Profile{
+    width: 300px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.Title{
+    font-size: 20px; 
+    width: 130px; display: s
+    block; margin-left: auto; 
+    margin-right: auto;
+}
+.Front_end{
+    width: 200px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.font_color{
+    color: lightslategray; 
+    font-size: 30px;
+}
+.content{
+    width: 200px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
