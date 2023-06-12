@@ -1,0 +1,63 @@
+.container{
+    width: 1500px;
+    height: 100%;
+}
+
+/* float */
+
+.header_float{
+    width: 100%;
+    /* 부모 태그 width의 100% */
+    height: 200px;
+    background-color: aquamarine;
+}
+.left_menu_float{
+    float: left;
+    /* float:left -> 요소를 붕 띄워서 왼쪽으로 정렬 div 가로 정렬에 용이하다.*/
+    width: 20%;
+    height: 800px;
+    background-color: cornflowerblue;
+}
+.content_float{
+    float: right;
+    width: 80%;
+    height: 800px;
+    background-color: coral;
+}
+.footer_float{
+    width: 100%;
+    /* 부모 태그 width의 100% */
+    height: 200px;
+    background-color: gray;
+    clear: both;
+    /* clear: both; -> float 다음에 오는 요소에게 주면 float로 발생하는 이상한 현상(공중에 뜨게 되어 평면도에 인식을 못함) 해결가능 */
+}
+
+/* inline-block */
+
+.header_inline-block{
+    width: 100%;
+    height: 200px;
+    background-color: aquamarine;
+}
+.left_menu_inline-block{
+    display: inline-block;
+    width: 20%;
+    height: 800px;
+    background-color: cornflowerblue;
+}
+.content_inline-block{
+    display: inline-block;
+    width: 80%;
+    height: 800px;
+    background-color: coral;
+    vertical-align: top;
+    /* vertical-align 디스플레이가 inline-block과 inline에서만 적용 가능(정렬하는 것) 
+    사용하는 이유 : baseline이 생성될 때 div경계 밖에 넘어가기 때문에 div가 다음칸으로 밀려남.
+    * baseline이 옆에 존재하면 display : inline-block 요소들이 baseline 위에 오려고 함.*/
+}
+.footer_inline-block{
+    width: 100%;
+    height: 200px;
+    background-color: gray;
+}
