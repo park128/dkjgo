@@ -1,0 +1,149 @@
+div {
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+
+.main-background{
+    width: 50%;
+    max-width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    background-image: url(A-2.jpg);
+    background-size: cover;
+    /* background-size: contain : 배경 짤리지 않게. */
+    background-repeat: no-repeat;
+    /* 이미지 반복 안되게 하기. */
+    background-position: center;
+    /* filter: brightness(90%); */
+    /* 밝기 필터 씌우기 */
+    padding: 1px;
+}
+/* 
+경로 숙지하기 
+../ -> 상위폴더로 이동 
+*/
+
+.main-title{
+    color: white;
+    font-size: 40px;
+    margin-top: 330px;
+    margin-left: 50px;
+}
+/* margin collapse 현상. 테두리가 겹칠때 마진을 주면 두곳 다 적용이 된다.
+해결방법: 상위 태그에 padding 값을 주어 테두리를 분리해놓는다.
+*/
+
+.main-background p {
+    color: white;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.main-button{
+    padding: 12px;
+    font-size: 15px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    /* position: relative; */
+}
+
+/* position 속성 숙지하기. */
+
+.content-box{
+    position: relative;
+    width: 40%;
+    max-width: 900px;
+    height: 200px;
+    background-color: #eee;
+    margin: 0 auto;
+    top: -50px;
+    text-align: center;
+}
+.content-box h4{
+    padding-top: 50px;
+}
+.content-box p{
+    padding-top: 10px;
+}
+input[type=text]{
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+/* type이 text인 input만 설정 가능한 설렉터 문법 */
+
+.footer_box{
+    width: 50%;
+    height: 900px;
+    margin: 0 auto;
+    background-color: rgb(54, 47, 47);
+}
+.contact_box{
+    position: relative;
+    width: 600px;
+    height: 700px;
+    padding:60px;
+    margin: 0 auto;
+    top: 100px;
+    background-color: white;
+}
+/* 수직 정렬하는 방법
+자식 태그에 position: relative; 로 지정하고
+부모 높이 - 자식 높이 /2 하면 된다.
+*/
+.contact_title{
+    width: 80%;
+    height: 50px;
+}
+.contact_e-mail{
+    width: 90%;
+    height: 80px;
+}
+.contact_e-mail > input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.contact_name{
+    width: 100%;
+    height: 80px;
+}
+.first_name{
+    display: inline-block;
+    width: 40%;
+    margin-right: 20px;
+}
+.first_name > input{
+    width: 100%;
+}
+.last_name{
+    display: inline-block;
+    width: 40%;
+    margin-left: 5%;
+}
+.last_name > input{
+    width: 100%;
+}
+
+.contact_message{
+    width: 90%;
+    height: 300px;
+    margin-top: 50px;
+}
+.contact_message > input{
+    width: 100%;
+    height: 200px;
+}
+.contact_button{
+    width: 80%;
+    height: 50px;
+}
+.SEND_button{
+
+}

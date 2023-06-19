@@ -35,6 +35,12 @@
 
 /* inline-block */
 
+/* inline-block 사용시 주의사항 
+   1.display:inline-block은 자기 크기만큼 자리를 차지함.
+   2.공백제거 필요
+   3.주변에 글이 있으면 가끔 이상해짐.
+*/
+
 .header_inline-block{
     width: 100%;
     height: 200px;
@@ -60,4 +66,51 @@
     width: 100%;
     height: 200px;
     background-color: gray;
+}
+
+/* Q. */
+
+.main{
+    width: 900px;
+    height: 600px;
+}
+.left{
+    width: 60%;
+    float: left;
+}
+.rigth{
+    width: 40%;
+    float: right;
+}
+.header{
+    width: 100%;
+    height: 100px;
+}
+.header > p{
+    display: inline-block;
+    margin-left: 30px;
+    vertical-align: top;
+}
+.title{
+    width: 100%;
+    height: 50px;
+    font-size: 40px;
+    font-weight: 900;
+}
+.content{
+    width: 90%;
+    height: 450px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.image_box{
+    width: 100%;
+    height: 600px;
+}
+.image_Buffalo{
+    width: 80%;
+    height: 80%;
+    background:url(물소.jpeg);
+    background-size: cover;
 }

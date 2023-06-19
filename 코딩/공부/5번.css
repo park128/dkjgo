@@ -1,0 +1,10 @@
+.navbar li{
+    display: inline-block;
+}
+/* selector 문법 숙지하기. */ 
+
+.navbar a{
+    font-size: 16px;
+    text-decoration: none; color:black;
+    /* 밑줄 없애기 검은색 유지 */
+}
