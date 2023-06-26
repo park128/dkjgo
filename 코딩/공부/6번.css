@@ -52,7 +52,7 @@ body{
 
 /* position 속성 숙지하기. */
 
-.content-box{
+.content_box1{
     position: relative;
     width: 40%;
     max-width: 900px;
@@ -62,10 +62,10 @@ body{
     top: -50px;
     text-align: center;
 }
-.content-box h4{
+.content_box1 h4{
     padding-top: 50px;
 }
-.content-box p{
+.content_box1 p{
     padding-top: 10px;
 }
 input[type=text]{
@@ -78,14 +78,14 @@ input[type=text]{
 
 .footer_box{
     width: 50%;
-    height: 900px;
+    height: 950px;
     margin: 0 auto;
     background-color: rgb(54, 47, 47);
 }
-.contact_box{
+.contact_box2{
     position: relative;
     width: 600px;
-    height: 700px;
+    height: 750px;
     padding:60px;
     margin: 0 auto;
     top: 100px;
@@ -133,7 +133,7 @@ input[type=text]{
 
 .contact_message{
     width: 90%;
-    height: 300px;
+    height: 280px;
     margin-top: 50px;
 }
 .contact_message > input{
@@ -145,5 +145,14 @@ input[type=text]{
     height: 50px;
 }
 .SEND_button{
-
+    position: relative;
+    width: 150px;
+    left: 210px;
+    height: 40px;
+    color: white;
+    background-color: orange;
+    border: white;
+    border-radius: 10px;;
 }
+
+/*box-sizing: border-box 숙지하기 */

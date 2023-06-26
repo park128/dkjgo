@@ -1,0 +1,138 @@
+/* td, th {
+    border: 1px solid black;
+} */
+/* th는 제목용으로 사용함. */
+
+/* td{
+    border-bottom:solid 1px #c2d3de;border-collapse:collapse;
+} */
+/* border 값을 입력해도 안보이는 버그가 있다. 그럴때는 border-collapse:collapse;를 입력하면 보인다. */
+
+
+.table_background{
+    width: 70%;
+    height: 900px;
+    background-color: #c2d3de;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 5px;
+}
+.table_background > h1{
+    margin-left: 10%;
+    padding: 70px 0px 30px 0px;
+    color: #56607e;
+}
+.table_shoppingitems{
+    table-layout: fixed;
+    border-spacing: 0;
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+/* 
+테이블을 스타일링 할 때에는 보통 먼저 너비를 고정하고 셀의 간격을 없애는 스타일을 적용하고 시작한다. 이렇게 해야 셀의 너비가 내용물에 따라 변하지 않고 셀에 선을 넣었을 때도 끊어지지 않게 나온다.
+최근에 표에 border-radius가 적용되지 않는 현상을 발견했는데 위와 같이 하면 셀 보더가 없어져서 라운딩이 적용되지 않는다고 한다.
+border-collapse는 기본값으로 두고 border-spacing: 0을 적용하면 border-radius도 적용이 되고 셀 간격도 없어지게 된다.
+그냥 div로 하는게 편할거같다 정말이지
+div태그를 이미지가 덮고 있어서 border-radius가 적용이 안되는 현상이 생겼었다.
+overflow: hidden;를 적용하니 보였다.
+*/
+.table_shoppingitems img{
+    width: 90%;
+}
+.tr_first{
+    height: 50px;
+    background-color: white;
+    padding: 15px;
+    border-bottom: 5px solid #c2d3de;border-collapse:collapse;
+    color: #56607e;
+}
+.tr_second{
+    height: 150px;
+    background-color: white;
+    padding: 15px;
+    border-bottom: 5px solid #c2d3de;border-collapse:collapse;
+}
+.tr_third{
+    height: 150px;
+    background-color: white;
+    padding: 15px;
+    border-bottom: 5px solid #c2d3de;border-collapse:collapse;
+}
+.tr_fourth{
+    height: 100px;
+    background-color: white;
+    padding: 15px;
+}
+
+.tr_first td:nth-child(2){
+    width: 300px;
+}
+.tr_first td:nth-child(3){
+    width: 100px;
+}
+.tr_first td:nth-child(3){
+    width: 125px;
+}
+.tr_first td:nth-child(4){
+    width: 175px;
+}
+.tr_second td:nth-child(3){
+    text-align: right;
+    padding-right: 70px;
+}
+.tr_third td:nth-child(3){
+    text-align: right;
+    padding-right: 70px;
+}
+.table_font1{
+    color:  #c2d3de;
+    font-size: 20px;
+    font-weight: 600;
+}
+.table_font2{
+    color: #0d1c48;
+    font-size: 20px;
+    font-weight: 900;
+}
+.purchase_button{
+    position: relative;
+    width: 300px;
+    height: 80px;
+    left: 42.5%;
+    background-color: #0d1c48;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.table_background span{
+    position: relative;
+    top: -3%;
+}
+.table_background u{
+    margin-top: -50px;
+    padding-left: 10%;
+    color: #56607e;
+    font-size: 20px;
+    font-weight: 600;
+}
+.but:hover {
+    background-color: chocolate;
+}
+.but:focus{
+    background-color: grey;
+}
+.but:active{
+    background-color: brown;
+}
+/* 
+:hover
+:focus
+:active
+넣을 때 순서가 중요하다. 순서가 달라지면 적용이 안될 수 있다.
+*/

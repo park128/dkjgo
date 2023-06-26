@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="7번.css">
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th><p>블락 속성으로</p><p>문단이 나뉜다.</p></th>
+                <td style="vertical-align: top;">위로</td>
+                <td style="vertical-align: bottom;">아래로</td>
+                <!-- style="vertical-align: ->  -->
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <p style="font-size: 50px">폰트사이즈 50px이다<span style="font-size: 30px;">폰트 사이즈 30px. 글에 높낮이 차이가 발생한다.</span><span style="vertical-align: top; font-size: 30px;">글자 기준을 위로</span><span style="vertical-align: bottom; font-size: 30px;">글자 기준을 아래로</span></p>
+        <span style="font-size: 20px;">(용도1)inline/inline-block 요소 간의 세로 정렬할 때 vertical-align을 사용한다.</span><br>
+        <span style="font-size: 20px;">(용도2)table 안에서 세로정렬 할 때에 vertical-align을 사용한다.</span>
+    </div>
+
+<div class="table_background">
+    <h1>Yout Shoppong Cart</h1>
+    <table class="table_shoppingitems">
+        <tr class="tr_first">
+            <td></td>
+            <td><strong>ITEM</strong></td>
+            <td><strong>AMOUNT</strong></td>
+            <td><strong>PRICE</strong></td>
+            <td><strong>TOTAL</strong></td>
+        </tr>
+        <tr class="tr_second">
+            <td><img src="카메라2.jpeg" alt=""></td>
+            <td><h3>SONY</h3><p class="table_font1">FE 70-200 mm F2.8 GM OSS</p></td>
+            <td><p class="table_font1">1</p></td>
+            <td><p class="table_font1">$1979.00</p></td>
+            <td><p class="table_font2">$1979.00</p></td>
+        </tr>
+        <tr class="tr_third">
+            <td><img src="카메라1.jpeg" alt=""></td>
+            <td><h3>SONY</h3><p class="table_font1">Sonnar T* E 24 mm F1.8 ZA</p></td>
+            <td><p class="table_font1">1</p></td>
+            <td><p class="table_font1">$989.00</p></td>
+            <td><p class="table_font2">$989.00</p></td>
+        </tr>
+        <tr class="tr_fourth">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="table_font2">$2968.00</td>
+        </tr>
+    </table>
+    <span><u>Edit your shopping cart</u></span><button class="purchase_button">choose payment method</button>
+</div>
+</body>
+</html>
