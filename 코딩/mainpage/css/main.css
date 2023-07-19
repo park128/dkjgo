@@ -1,5 +1,5 @@
 
-/*----------navbar---------- */
+/*-------- Navbar Css-------------------------------------------------------------------------*/
 i:hover{
     background-color: #515151;
     border-radius: 20px;
@@ -9,6 +9,7 @@ i:hover{
     display: flex;
     width: 100%;
     height: 15vh;
+    font-family: 'Dosis', sans-serif;
     justify-content: space-between;
     align-items: center;
     background-color: #000;
@@ -39,36 +40,35 @@ i:hover{
         opacity: 0.5;
     }
 }
-
 .navbar_logo{
-    margin-left: 50px;
-    font-size: 2.5em;
-    color: white;
+    margin-left: 100px;
 }
+
 .navbar_menu{
     display: flex;
     list-style: none;
     font-size: 1.5em;
-    margin-right: 150px;
-    padding-left: 0;
+    margin-right: 170px;
 }
+
 .navbar_menu li {
-    padding: 12px 18px;
+    padding: 0px 30px;
 }
-.navbar_menu li:hover {
+
+.navbar_menu a:hover {
     background-color: #515151;
     border-radius: 5px;
 }
+
 .navbar_icons{
     font-size: 1.5em;
     list-style: none;
-    color: white;
     display: flex;
-    padding-right: 50px;
+    padding-right: 100px;
 }
 
 .navbar_icons li {
-    padding: 8px 12px;
+    padding: 0px 10px;
 }
 
 .navbar_toogleBtn {
@@ -79,16 +79,54 @@ i:hover{
     color: #ffffff;
 }
 
+.hamburger .line{
+    width: 40px;
+    height: 5px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+}
+
+.hamburger:hover{
+    cursor: pointer;
+}
+
+#hamburger-10{
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#hamburger-10.is-active{
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#hamburger-10.is-active .line:nth-child(1){
+    width: 15px
+}
+
+#hamburger-10.is-active .line:nth-child(2){
+    width: 27px
+}
+  
+      /* 
+1200
+768 */
+
 @media screen and (max-width: 1545px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
     .navbar_logo{
+        padding-top: 20px;
         margin: auto;
-        margin-top: 6vh;
-        font-size: 3em;
-        color: white;
     }
     .navbar_menu {
         display: none;
@@ -98,7 +136,25 @@ i:hover{
     }
     .navbar_menu li {
         width: 100%;
+        height: 55px;
         text-align: center;
+        padding-top: 5px;
+    }
+    .navbar_menu a{
+        width: 130px;
+        height: 75px;
+    }
+    .navbar_menu a:hover{
+        animation-name: shake;
+        animation-duration: 1s;
+    }
+
+    @keyframes shake {
+        0%  {transform: rotate(0deg);}
+        25% {transform: rotate(-8deg)}
+        50% {transform: rotate(8deg)}
+        75% {transform: rotate(-8deg)}
+        100%{transform: rotate(0deg)}
     }
     .navbar_icons {
         display: none;
@@ -108,12 +164,12 @@ i:hover{
 
     .navbar_toogleBtn {
         font-size: 2em;
-        top: 2vh;
-        z-index: 120;
+        top: 5vh;
+        z-index: 2;
         display: block;
     }
     .navbar_menu.active{
-        margin-top: 6vh;
+        margin-top: 2vh;
     }
     .navbar_menu.active,
     .navbar_icons.active {
@@ -125,8 +181,9 @@ i:hover{
         display: none;
     }
 }
+/*-------- Navbar Css-------------------------------------------------------------------------*/
 
-/*----------sgv css----------*/
+/*-------- SVG CSS-------------------------------------------------------------------------*/
 svg{
     width: 100%;
     height: 100%;
@@ -154,53 +211,34 @@ svg{
     stroke: #fff;
     stroke-width: 2px;
 }
-/*----------main css----------*/
+.path4{
+    position: absolute;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+}
+/*-------- SVG CSS-------------------------------------------------------------------------*/
+
+/*-------- Main__Page CSS-------------------------------------------------------------------------*/
 .fullpage{
     width: 100%;
-}
-.main__page {
-    position: relative;
 }
 .main__layout {
     position: relative;
     height: 105vh;
     background-color: #000;
     color: #fff;
-}
-.main__layout_fluid {
     padding-left: 60px;
     padding-right: 60px;
 }
 .row {
     display: flex;
+    height: 105vh;
     flex-wrap: nowrap;
 }
 .mian__box1 {
     width: 66.666667%;
 }
-.vertical_wrap{
-    height: 87vh;
-    padding-bottom: 170px;
-}
-.park {
-    width: 555px;
-    height: 100%;
-    transform: rotate(270deg);
-    margin-left: 100px;
-}
-
-.vertical_wrap ul {
-    display: flex;
-    justify-content: space-between;
-}
-
-.vertical_wrap ul li{
-    color: #e4f2f4;
-    font-size: 24px;
-    line-height: 50px;
-    letter-spacing: 0.01em;
-}
-
 .mian__box2 {
     width: 33.3333333333%;
     border-left: #737373 1px solid;
@@ -211,21 +249,63 @@ svg{
     height: 100%;
 }
 .context_space_block .box1 {
+    width: 110%;
     height: 600px;
     border-bottom: #737373 1px solid;
 }
-.context_space_block .box2 {
-    width: 100%;
-    height: 30%;
-    padding: 120px 0px 0px 30px;
+.context_space_block .box2{
+    position: absolute;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 1;
 }
-.context_space_block .box2 p{
-    padding: 20px;
+.circle{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* background-color: #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 18vh;
 }
 
-.context_space_block .box2 a{
-    padding: 20px;
+.logo{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: url();
+    background-size: cover;
+    border-radius: 50%;
+    filter: brightness(1.5) contrast(1.5);
 }
+.text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotateText 40s linear infinite;
+}
+@keyframes rotateText{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.text span {
+    position: absolute;
+    left:50%;
+    font-size: 2em;
+    transform-origin: 0 140px;
+}
+/*-------- Main__Page CSS-------------------------------------------------------------------------*/
+
+/*-------- Icon Scroll CSS-----------------------------------------------------------------------*/
 .icon-scroll, .icon-scroll:before {
     position: absolute;
     left: 50%;
@@ -269,10 +349,10 @@ svg{
     margin-left: auto;
     margin-right: auto;
 }
-/* music_section */
+/*-------- Icon Scroll CSS-----------------------------------------------------------------------*/
 
+/*-------- Music__page CSS---------------------------------------------------------------------*/
 .music_box{
-    height: 68vh;
     padding: 0px 50px 0px 50px;
     display: flex;
     margin-top: -580px;
@@ -325,42 +405,15 @@ svg{
     display: block;
     width: 100%;
 }
-.music_layout{
+.content2{
     position: absolute;
     width: 100%;
-    top: 20vh;
-    z-index: 1;
+    margin-top: -50vh;
 }
+/*-------- Music__page CSS---------------------------------------------------------------------*/
 
-.music_park {
-    position: relative;
-    width: 540px;
-    height: 100%;
-    margin-left: 20vh;
-}
-
-.music_title{
-    width: 900px;
-    height: 100px;
-    font-family: "SUIT", Malgun Gothic, dotum, "돋움", Arial, AppleGothic, Sans-serif;
-    font-size: 100px;
-    color: #fff;
-    font-weight: 500;
-}
-
-.music_title span{
-    letter-spacing: 4px;
-}
-.music_content{
-    font-family: "SUIT", Malgun Gothic, dotum, "돋움", Arial, AppleGothic, Sans-serif;
-    font-size: 30px;
-    font-weight: 900;
-    color: #fff;
-    font-weight: 500;
-    line-height: 1.7;
-    letter-spacing: 2px;
-}
-.music_layout2 {
+/*-------- Mbti__Page CSS-----------------------------------------------------------------------*/
+.mbti_layout2 {
     display: flex;
     flex-direction: column;
     height: 95vh;
@@ -368,27 +421,27 @@ svg{
     color: #fff;
 }
 
-.music_layout2_top {
+.mbti_layout2_top {
     display:flex;
     height: 20%;
     border-bottom: #737373 1px solid;
 }
-.music_layout2_middle {
+.mbti_layout2_middle {
     display:flex;
     width: 100%;
     height: 80%;
 }
-.music_layout2_bottom {
+.mbti_layout2_bottom {
     display: flex;
     height: 10%;
 }
 
-.music_col-3 {
+.mbti_col-3 {
     width: 65.666667%;
     height: 100%;
 
 }
-.music_col-3_layout {
+.mbti_col-3_layout {
     position: absolute;
     display: none;
     padding: 110px 130px 80px;
@@ -417,7 +470,6 @@ svg{
         opacity: 1;
     }
 }
-
 .data_col .icon {
     width: 40px;
     position: absolute;
@@ -432,7 +484,7 @@ svg{
     margin-bottom: 60px;
 }
 
-.music_col-4 {
+.mbti_col-4 {
     width:34.333333%;
     height: 112%;
     text-align: center;
@@ -441,23 +493,8 @@ svg{
     justify-content: center;
     border-left: #737373 1px solid;
 }
-
-
-/* mbti  */
-.record_wrapper2{
-    position: relative;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.content2{
-    position: absolute;
-    min-width: 1800px;
-    width: 95%;
-    top: -60vh;
-
+.content3{
+    width: 200%;
 }
 .mbti_section{
     position: relative;
@@ -470,57 +507,6 @@ svg{
 .mbti_inner > img{
     display: block;
     width: 100%;
-}
-
-.mbti_layout{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    z-index: 1;
-}
-.circle{
-    position: relative;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    /* background-color: #ccc; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 25vh;
-    left: 18vh;
-}
-
-.logo{
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    background: url();
-    background-size: cover;
-    border-radius: 50%;
-    filter: brightness(1.5) contrast(1.5);
-}
-.text{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    animation: rotateText 30s linear infinite;
-}
-@keyframes rotateText{
-    0%{
-        transform: rotate(360deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-}
-.text span {
-    position: absolute;
-    left:50%;
-    font-size: 2em;
-    transform-origin: 0 140px;
 }
 .mbti_box{
     height: 63vh;
@@ -541,78 +527,9 @@ svg{
     background-color: #737373;
     color: #fff;
 }
+/*-------- Mbti__Page CSS-----------------------------------------------------------------------*/
 
-/* chatbot */
-
-.chatbot_box{
-    height: 63vh;
-    padding: 0px 50px 0px 50px;
-    display: flex;
-}
-
-.content3{
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    left: -10vh;
-}
-
-.chatbot_col-1{
-    width: 49%;
-    height: 60%;
-    padding: 16px;
-}    
-.border_left2 {
-    border-left: #000 1px solid;
-}
-
-.chatbot_col-2{
-    padding: 100px 60px 60px 60px;
-    width: 80%;
-    height: 90%;
-}
-.aaa{
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 10%;
-    top: 20vh;
-}
-
-
-.aaa > div svg {
-    fill: none;
-    height: 300px;
-    stroke-width: 53px;
-    stroke-linecap: round;
-}
-   
-.svg-main > path {
-    stroke-dasharray: var(--length);
-    stroke-dashoffset: var(--length);
-}
-.svg-bg > path {
-    stroke-dasharray: var(--length);
-    stroke-dashoffset: var(--length);
-}
-   
-.svg-bg > path {
-    stroke: #FFF;
-    animation: path var(--duration) ease forwards;
-    animation-delay: var(--delay);
-}
-   
-.svg-main > path {
-    stroke: #EE4E34;
-    animation: path var(--duration) ease-in forwards;
-    animation-delay: var(--delay);
-}
-   
-@keyframes path {
-    100% { stroke-dashoffset: 0; }
-}
-
-/* footer */
+/*-------- footer CSS-----------------------------------------------------------------------*/
 .footer_box {
     position: relative;
     display: flex;
@@ -666,3 +583,27 @@ svg{
 
 
 /* 깃을 위 */
+
+/* 
+.vertical_wrap{
+    height: 87vh;
+    padding-bottom: 170px;
+}
+.park {
+    width: 555px;
+    height: 100%;
+    transform: rotate(270deg);
+    margin-left: 100px;
+}
+
+.vertical_wrap ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vertical_wrap ul li{
+    color: #e4f2f4;
+    font-size: 24px;
+    line-height: 50px;
+    letter-spacing: 0.01em;
+} */

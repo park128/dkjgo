@@ -1,11 +1,20 @@
-// svg 
-
 const content1 = document.querySelector('.content1')
 const path1 = document.querySelector('.path2')
 const path1Length = path1.getTotalLength()
+const content2 = document.querySelector('.content2')
+const path2 = document.querySelector('.path3')
+const path2Length = path2.getTotalLength()
+const content3 = document.querySelector('.content3')
+const path3 = document.querySelector('.path4')
+const path3Length = path2.getTotalLength()
+
 
 path1.style.strokeDasharray = path1Length
 path1.style.strokeDashoffset = calcDashoffset(window.innerHeight*0.8, content1, path1Length)
+path2.style.strokeDasharray = path2Length
+path2.style.strokeDashoffset = calcDashoffset(window.innerHeight*0.2, content2, path2Length)
+path3.style.strokeDasharray = path3Length
+path3.style.strokeDashoffset = calcDashoffset(window.innerHeight*0.2, content3, path3Length)
 
 function calcDashoffset(scrollY, element, length) {
     const ratio = (scrollY - element.offsetTop) / element.offsetHeight
@@ -16,6 +25,8 @@ function calcDashoffset(scrollY, element, length) {
 function scrollHandler() {
     const scrollY = window.scrollY + (window.innerHeight * 0.8)
     path1.style.strokeDashoffset = calcDashoffset(scrollY, content1, path1Length)
+    path2.style.strokeDashoffset = calcDashoffset(scrollY, content2, path2Length)
+    path3.style.strokeDashoffset = calcDashoffset(scrollY, content3, path3Length)
 }
 
 window.addEventListener('scroll', scrollHandler)
@@ -37,12 +48,12 @@ toggleBtn.addEventListener('click',()=>{
 const text = document.querySelector('.text p');
 text.innerHTML = text.innerText.split("").map(
     (char, i) =>
-    `<span style="transform:rotate(${i * 19.5}deg)">${char}</span>`
+    `<span style="transform:rotate(${i * 16.5}deg)">${char}</span>`
 ).join("")
 
 // MBTI 스크롤 이벤트
 
-const mainText = document.querySelector('.music_col-3_layout');
+const mainText = document.querySelector('.mbti_col-3_layout');
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll',function(){
@@ -80,4 +91,10 @@ window.addEventListener('scroll',function(){
     //         path.style.setProperty('--delay', i * 100 + 'ms')
     //     })   
     // }
+});
+
+const hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click',()=>{
+    hamburger.classList.toggle('is-active');
 });

@@ -171,11 +171,6 @@ pseudo-class
 .overlay:hover{
     opacity: 1;
 }
-
-
-
-
-
 .product-container{
     display: flex;
     width: 800px;
